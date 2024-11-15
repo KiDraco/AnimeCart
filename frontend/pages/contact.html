@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    img{
+        height: 465px;
+        width: auto;
+    }
+    .caja {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 20px;
+    }    
+    .responsive-img {        
+        border-radius: 8px;
+        margin-right: 20px; 
+    }
+    .form-container {
+        border: 1px solid #ddd; 
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9; 
+        flex: 1;
+    }
+    /*Media Query*/
+    @media (min-width:250px) and (max-width:1000px) 
+    {
+        .caja{
+            display: contents;       
+        }
+        .responsive-img{
+            display: block;
+        }
+        .form-container
+        {
+            background-color: skyblue;   
+            max-width: fit-content;  
+            margin: 10px;
+            
+        }
+    }
+</style>
+<body>
+    <header class="head">
+        <div class="mainHead">
+            <div>
+                <h1>AnimeCart</h1>
+            </div>
+            <div class="login">            
+                <i class="fas fa-user" style="margin: 6.5px 10px 0 0"></i>
+                <h3>KiDraco</h2>
+            </div>
+        </div>
+        <nav class="headerLinks">
+            <ul></ul>
+                <li><a aria-current="page" href="../../index.html">Home</a></li>
+                <li><a class="whiteTxt" href="/frontend/pages/about.html">About Us</a></li>                
+                <li><a class="whiteTxt" href="/frontend/pages/contact.html">Contact</a></li>
+                <li><a class="whiteTxt" href="/frontend/pages/cart.html"><i class="fas fa-shopping-cart" aria-hidden="true"> </i> </a></li>
+            </ul>
+        </nav>
+    </header>    
+    <div class="container">
+        <h1 class="text-center mt-5">Contact Us</h1>
+        <div class="caja">
+            <div>
+                <img src="/frontend/image/ContactMew.jpg" class="responsive-img" alt="Ejemplo de Imagen">
+            </div>
+            <form action="https://formspree.io/f/mjkbqpgr" method="POST" class="form-container">
+                <div class="form-group">
+                    <label for="fname">Nombre:</label>
+                    <input type="text" class="form-control" required placeholder="Escriba su nombre" maxlength="10" id="fname" name="fname">
+                </div>
+                <div class="form-group">
+                    <label for="mail">Mail:</label>
+                    <input type="email" class="form-control" required placeholder="Escriba su Mail" minlength="8" id="mail" name="mail">
+                </div>
+                <div class="form-group">
+                    <label for="file">Archivo:</label>
+                    <input type="file" class="form-control-file" id="file" name="file">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comentario:</label>
+                    <textarea id="comment" name="comment" class="form-control" cols="10" rows="3" placeholder="Escriba su comentario"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="mainFooter">
+            <div>
+                <h3>AnimeCart</h3>
+                <p>Somos una tienda especializada en la venta de insumos y productos relacionados con el universo Pokémon. Ofrecemos una amplia gama de hasta cartas y accesorios para entrenadores. Nuestro objetivo es brindar productos de alta calidad y exclusivas. Además, organizamos eventos y torneos para crear una comunidad vibrante y conectada.</p>                
+            </div>
+            <div>
+                <h3>Enlances</h3>
+                <ul>
+                    <li><a class="whiteTxt" href="index.html">Home</a></li>
+                    <li><a class="whiteTxt" href="/frontend/pages/about.html">About Us</a></li>
+                    <li><a class="whiteTxt" href="/frontend/pages/cart.html" >Cart</a></li>
+                    <li><a class="whiteTxt" href="/frontend/pages/contact.html">Contact</a></li>
+                    <li><a class="whiteTxt" href="mailto:info@gmail.com?subject=AsuntoUrgente">Send e-Mail</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Redes Sociales</h3>
+                <ul>                    
+                    <li><a class="whiteTxt" href="#!" class="text-white"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a class="whiteTxt" href="#!" class="text-white"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a class="whiteTxt" href="#!" class="text-white"><i class="fab fa-x"></i> X</a></li>                    
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 Copyright - Leandro Conde</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
