@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AnimeCart</title>
     <link rel="stylesheet" href="frontend/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">      
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
 </head>
 <body>
     <header class="head">
@@ -17,18 +17,35 @@
             </div>
             <div class="login">            
                 <i class="fas fa-user" style="margin: 6.5px 10px 0 0"></i>
-                <h3>KiDraco</h2>
+                <h3>KiDraco</h3>
             </div>
         </div>
-        <nav class="headerLinks">
-            <ul></ul>
-                <li><a class="whiteTxt" aria-current="page" href="index.html">Home</a></li>
-                <li><a class="whiteTxt" href="/frontend/pages/about.html">About Us</a></li>                
-                <li><a class="whiteTxt" href="/frontend/pages/contact.html">Contact</a></li>
-                <li><a class="whiteTxt" href="/frontend/pages/cart.html"><i class="fas fa-shopping-cart" aria-hidden="true"> </i> </a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> 
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/frontend/pages/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/frontend/pages/contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/frontend/pages/cart.html">
+                            <i class="fas fa-shopping-cart" aria-hidden="true"></i> 
+                            <span id="cart-counter" class="badge badge-light">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-    </header> 
+    </header>
     <main>
         <div class="divSection">
             <section>
@@ -39,14 +56,21 @@
                 <img src="/frontend/image/IndexGengar.jpg">
             </section>
         </div>
-        <div class="container mt-5">            
-            <div id="cardTable" class="row">                
+        <div class="container mt-5">     
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" id="search-input" class="form-control" placeholder="Buscar por nombre de carta">
+                    </div>
+                </div>
             </div>
+            <div id="cardTable" class="row"></div>
+            <div id="pagination-controls" class="pagination-controls"></div>           
         </div>        
     </main>   
     <footer class="footer">
         <div class="mainFooter">
-            <div>
+            <div class="aboutFooter">
                 <h3>AnimeCart</h3>
                 <p>Somos una tienda especializada en la venta de insumos y productos relacionados con el universo Pokémon. Ofrecemos una amplia gama de hasta cartas y accesorios para entrenadores. Nuestro objetivo es brindar productos de alta calidad y exclusivas. Además, organizamos eventos y torneos para crear una comunidad vibrante y conectada.</p>                
             </div>
@@ -73,7 +97,8 @@
             <p>© 2024 Copyright - Leandro Conde</p>
         </div>
     </footer>
-    <script src="/js/script.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -5,41 +5,53 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.mainHead {    
-    padding: 20px 50px 20px 50px;
-    display: flex;
-    justify-content: space-between;    
-    background-color: #333;
-    color: white;
+@media (max-width: 767px) {
+    .aboutFooter {
+      display: none;
+    }
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    width: 100%;
+}
+
+.mainHead {    
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+}
 .login{
     font-size: large;
     display: flex;
     padding: 10px 20px 0 0;
 }
-
-.headerLinks{    
+.navbar-custom {
     display: flex;
+    justify-content: right;
+    align-items: right; 
     background-color: #222;
-    padding: 10px 50px 10px 0;
-    text-align: right;    
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: flex-end;
+    width: 100%;
 }
-.headerLinks ul {    
-    display: flex; 
-    list-style: none; 
-    padding: 0; 
+.navbar-custom .navbar-nav {
+    display: flex;
+    justify-content: right; 
+    width: 100%;
 }
-
-.headerLinks li {    
-    margin-right: 20px;
+.navbar-custom .nav-link {
+    color: white;
 }
-
-.headerLinks li:last-child {
-    margin-right: 0;
+.navbar-custom .nav-link:hover {
+    color:skyblue; 
+}
+.navbar-toggler-icon {
+    background-color: white;
 }
 
 img {
@@ -136,3 +148,38 @@ section img:hover{
     max-width: none;
     margin: auto; 
 }
+#cart-counter {        
+        background-color: white;
+        color: black;
+        font-size: 12px;
+        border-radius: 25%;
+}
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.page-btn {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.page-btn.active {
+    background-color: #0056b3;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+}
+.page-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+#cardTable{
+    margin-top: 10px;
+}
+
